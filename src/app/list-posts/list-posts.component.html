@@ -1,0 +1,13 @@
+<img src="assets\home-bg.jpg" style="width:100%;">
+<div class="container">
+    <div class="row" *ngFor="let item of allPosts; let i = index" style='border-radius: 25px;border: 1px solid grey; padding:25px'>
+        <div class="col-lg-12">
+            <h3>{{item.title}}</h3>
+            <br>
+            <h4>{{item.abstract}}</h4>
+            <a [routerLink]='["/viewPost", i]'>View Post</a>
+            <hr>
+        </div>
+        <hr>
+    </div>
+</div>
